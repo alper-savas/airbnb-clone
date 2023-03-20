@@ -129,7 +129,7 @@ main {
   font-weight: 400;
   font-size: 1.4rem;
   text-decoration: none;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
 }
 
 .last-bar-item:hover,
@@ -191,6 +191,7 @@ main {
 }
 
 .icon-and-text {
+  padding-bottom: 1.4rem;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -198,6 +199,23 @@ main {
   gap: 1rem;
   font-size: 1.2rem;
   color: #888;
+  border-bottom: solid 3px transparent;
+}
+
+.hover-on-icon {
+  border-bottom: solid 3px #ddd;
+}
+
+.hover-on-icon p {
+  color: #000;
+}
+
+.click-on-icon {
+  border-bottom: solid 3px #000;
+}
+
+.click-on-icon p {
+  color: #000;
 }
 
 .btn-next-button {
@@ -211,6 +229,7 @@ main {
   align-items: center;
   justify-self: center;
   align-self: center;
+  transform: translateY(-1rem);
 }
 
 .chevron-icon {
@@ -232,6 +251,7 @@ main {
   border: solid 0.1px #ddd;
   border-radius: 1rem;
   width: 9rem;
+  height: 5rem;
   transform: translateX(-1rem);
 }
 
@@ -257,6 +277,7 @@ main {
 .place {
   font-size: 1.8rem;
   overflow: hidden;
+  position: relative;
 }
 
 .place img {
@@ -466,4 +487,26 @@ main {
 .footer-second-part a:hover,
 .footer-second-part a:active {
   text-decoration: underline;
+}
+
+.floating-chevron-button {
+  background-color: transparent;
+  position: absolute;
+  top: 14rem;
+  right: 1.2rem;
+  border: none;
+  z-index: -1;
+}
+
+.floating-chevron {
+  font-size: 1.4rem;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.increase-z-index .floating-chevron-button {
+  z-index: 10000000;
 }
