@@ -1,5 +1,11 @@
+// Select necessary items on page
 const place = document.querySelectorAll(".place");
 const icons = document.querySelectorAll(".icon-and-text");
+const profile = document.querySelector(".last-bar-icons");
+const expandProfile = document.querySelector(".expand-profile");
+const abs = document.querySelector(".abs");
+
+// Add event listener
 place.forEach((item) =>
   item.addEventListener("mouseover", () => {
     item.classList.add("increase-z-index");
@@ -34,3 +40,19 @@ icons.forEach((icon) =>
     activeIcon = icon;
   })
 );
+
+profile.addEventListener("click", () => {
+  expandProfile.classList.toggle("visible");
+  console.log(expandProfile);
+});
+
+// Implement sticky navigation
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 21) {
+    abs.classList.remove("abs");
+    abs.classList.add("sticky-second");
+  } else {
+    abs.classList.add("abs");
+    abs.classList.remove("sticky-second");
+  }
+});

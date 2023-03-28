@@ -30,16 +30,24 @@ main {
   position: relative;
 }
 
+.placeholder {
+  height: 18rem;
+}
+
 .nav-bar {
-  max-width: 138rem;
-  margin: 0 auto;
+  width: 138rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 8rem;
   padding-top: 1.6rem;
   padding-bottom: 1.8rem;
+  padding-right: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: end;
   align-items: center;
   border-bottom: solid 1px #eee;
+  background-color: #fff;
 }
 
 .middle-bar-div {
@@ -121,6 +129,11 @@ main {
   gap: 1.4rem;
   list-style: none;
   font-size: 2rem;
+  cursor: pointer;
+}
+
+.last-bar-icon:hover {
+  cursor: pointer;
 }
 
 .last-bar-item:link,
@@ -168,8 +181,9 @@ main {
 
 .icons-list {
   max-width: 138rem;
-  margin: 0 auto;
-  margin-top: 3.4rem;
+  padding-left: 3rem;
+  margin-left: 7rem;
+  padding-top: 1.5rem;
 }
 
 .whole-bar {
@@ -181,6 +195,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 1rem;
 }
 
 .icons img {
@@ -227,7 +242,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: center;
+  justify-self: start;
   align-self: center;
   transform: translateY(-1rem);
 }
@@ -236,8 +251,8 @@ main {
   color: #111;
   height: 1.4rem;
   width: 1.4rem;
-  transform: translateX(0.1rem);
-  transform: translateY(0.1rem);
+  transform: translateX(0.2rem);
+  transform: translateY(0.2rem);
 }
 
 .filter-icon-button {
@@ -269,7 +284,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
-  margin-top: 3.8rem;
+  margin-top: 2.2rem;
   margin-bottom: 8rem;
   row-gap: 4rem;
 }
@@ -374,6 +389,28 @@ main {
 
 .dot:first-child {
   opacity: 100%;
+}
+
+.floating-chevron-button {
+  background-color: transparent;
+  position: absolute;
+  top: 14rem;
+  right: 1.2rem;
+  border: none;
+  z-index: -1;
+}
+
+.floating-chevron {
+  font-size: 1.4rem;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.increase-z-index .floating-chevron-button {
+  z-index: 10000;
 }
 
 .floating-action-button {
@@ -489,24 +526,75 @@ main {
   text-decoration: underline;
 }
 
-.floating-chevron-button {
-  background-color: transparent;
-  position: absolute;
-  top: 14rem;
-  right: 1.2rem;
-  border: none;
-  z-index: -1;
-}
-
-.floating-chevron {
-  font-size: 1.4rem;
-  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+.sticky {
+  width: 170rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 1000000;
   background-color: #fff;
-  border-radius: 10rem;
-  display: flex;
-  align-items: center;
 }
 
-.increase-z-index .floating-chevron-button {
-  z-index: 10000000;
+.abs {
+  position: absolute;
+  width: 170rem;
+  height: 7rem;
+  top: -10rem;
+  z-index: 1000000;
+  background-color: #fff;
+}
+
+.sticky-second {
+  position: fixed;
+  width: 170rem;
+  height: 8rem;
+  top: 8.2rem;
+  z-index: 1000000;
+  background-color: #fff;
+}
+
+.expand-profile {
+  width: 24rem;
+  height: 23rem;
+  background-color: #fff;
+  z-index: 100000000;
+  position: absolute;
+  top: 8.2rem;
+  right: 8.2rem;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+  visibility: hidden;
+}
+
+.top-part {
+  border-bottom: solid 1px #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.bottom-part {
+  border-bottom: solid 1px #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 2rem;
+  padding-top: 0.7rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.sign-up {
+  font-weight: 400;
+}
+
+.visible {
+  visibility: visible !important;
 }
